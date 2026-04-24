@@ -22,6 +22,7 @@ A responsive product card carousel built with vanilla HTML, CSS, and JavaScript.
 - [Accessibility](#accessibility)
 - [License](#license)
 - [Contact](#contact)
+- [Support Me](#support-me)
 
 ---
 
@@ -160,7 +161,7 @@ Distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 [![X](https://img.shields.io/badge/X-NaxvenUI-000000?style=flat&logo=x&logoColor=white)](https://x.com/NaxvenUI)
 
-## Support
+## Support Me
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Support%20Naxven%20UI-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/naxvenui)
 

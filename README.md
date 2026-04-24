@@ -129,6 +129,7 @@ product-cards-1/
 │       ├── mockup_2.png
 │       └── mockup_3.png
 ├── index.html
+├── LICENSE
 └── README.md
 ```
 

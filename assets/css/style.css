@@ -1,0 +1,391 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+/* ===== Carousel Shell ===== */
+.carousel-shell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* ===== Nav Arrows ===== */
+.nav-btn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid #e5e7eb;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition:
+    background 0.18s,
+    border-color 0.18s,
+    color 0.18s,
+    transform 0.15s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-btn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+.nav-btn:active {
+  transform: scale(0.92);
+}
+
+/* ===== Carousel Center Column ===== */
+.carousel-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: 32px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+/* ===== Card ===== */
+.card {
+  flex: 0 0 100%;
+  background: #ffffff;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+/* ===== Card Image ===== */
+.card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.1 / 1;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: inset 0 -15px 15px -15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 20px;
+}
+
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-placeholder i {
+  font-size: 52px;
+}
+
+/* ===== Favorite Button ===== */
+.fav-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.86);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: #9ca3af;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition:
+    color 0.18s,
+    background 0.18s,
+    transform 0.18s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fav-btn:hover {
+  background: #ffffff;
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+.fav-btn.active {
+  color: #ef4444;
+  background: #ffffff;
+}
+
+/* ===== Card Body ===== */
+.card-body {
+  padding: 20px;
+}
+
+/* ===== Title ===== */
+.card-title {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #111827;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+/* ===== Sizes ===== */
+.sizes-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.sizes-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.size-btn {
+  min-width: 36px;
+  height: 34px;
+  padding: 0 9px;
+  border-radius: 8px;
+  border: 1.5px solid #e5e7eb;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    background 0.15s,
+    color 0.15s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.size-btn:hover:not(.unavailable):not(.selected) {
+  border-color: #6b7280;
+  color: #111827;
+}
+
+.size-btn.selected {
+  border-color: #111827;
+  background: #111827;
+  color: #ffffff;
+}
+
+.size-btn.unavailable {
+  color: #d1d5db;
+  border-color: #f3f4f6;
+  background: #fafafa;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* ===== Description ===== */
+.card-desc {
+  font-size: 0.8375rem;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+/* ===== Footer ===== */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.price-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.price-value {
+  font-weight: 800;
+  font-size: 1.375rem;
+  color: #111827;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+/* ===== "Add to Cart" Button ===== */
+.add-btn {
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 12px;
+  border: none;
+  background: #1a1a1a;
+  color: #ffffff;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  white-space: nowrap;
+  transition:
+    background 0.18s,
+    transform 0.15s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.add-btn i {
+  font-size: 16px;
+}
+
+.add-btn:hover {
+  background: #1f2937;
+}
+
+.add-btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== Navigation Dots ===== */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 14px;
+}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  border-radius: 2px;
+  background: #d1d5db;
+  cursor: pointer;
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+.dot.active {
+  width: 20px;
+  background: #374151;
+}
+
+/* ===== Breakpoints ===== */
+
+@media (min-width: 400px) {
+  .carousel-shell {
+    gap: 14px;
+  }
+  .card-body {
+    padding: 22px;
+  }
+}
+
+@media (min-width: 520px) {
+  .carousel-shell {
+    max-width: 440px;
+    gap: 16px;
+  }
+  .card-body {
+    padding: 24px;
+  }
+  .card-title {
+    font-size: 1.1875rem;
+  }
+  .size-btn {
+    height: 36px;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-shell {
+    max-width: 500px;
+  }
+  .card-body {
+    padding: 28px;
+  }
+  .card-title {
+    font-size: 1.25rem;
+  }
+  .card-desc {
+    font-size: 0.875rem;
+  }
+  .nav-btn {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-shell {
+    max-width: 540px;
+  }
+  .card-body {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .carousel-shell {
+    max-width: 560px;
+  }
+}

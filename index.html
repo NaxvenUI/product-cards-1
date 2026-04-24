@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Product Cards</title>
+
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@500,600,700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="carousel-shell">
+      <button class="nav-btn" id="prevBtn" aria-label="Previous product">
+        <i class="ri-arrow-left-s-line"></i>
+      </button>
+
+      <div class="carousel-col">
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="track">
+            <article class="card" aria-label="Oversize Leather Jacket">
+              <div class="card-img-wrap">
+                <img src="assets/images/leather_jacket.png" alt="Brown oversized leather jacket" loading="eager" />
+                <button class="fav-btn" aria-label="Add to favorites" onclick="toggleFav(this)">
+                  <i class="ri-heart-line"></i>
+                </button>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Oversize Leather Jacket</h2>
+
+                <p class="sizes-label">Size</p>
+                <div class="sizes-wrap">
+                  <button class="size-btn unavailable" disabled aria-disabled="true" aria-label="XS, unavailable">
+                    XS
+                  </button>
+                  <button class="size-btn" onclick="selectSize(this)">S</button>
+                  <button class="size-btn selected" onclick="selectSize(this)">M</button>
+                  <button class="size-btn" onclick="selectSize(this)">L</button>
+                  <button class="size-btn" onclick="selectSize(this)">XL</button>
+                  <button class="size-btn" onclick="selectSize(this)">XXL</button>
+                </div>
+
+                <p class="card-desc">
+                  Full-grain brown leather with a relaxed, oversized silhouette.
+                  Ribbed cuffs, YKK zip closure, and a clean unlined interior.
+                  Built to last decades.
+                </p>
+
+                <div class="card-footer">
+                  <div class="price-block">
+                    <span class="price-label">Price</span>
+                    <span class="price-value">€249.99</span>
+                  </div>
+                  <button class="add-btn" aria-label="Add Oversize Leather Jacket to cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" aria-label="Air Runner Pro sneakers">
+              <div class="card-img-wrap">
+                <img src="assets/images/sneakers.png" alt="Brown oversized leather jacket" loading="eager" />
+                <button class="fav-btn" aria-label="Add to favorites" onclick="toggleFav(this)">
+                  <i class="ri-heart-line"></i>
+                </button>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Air Runner Pro</h2>
+
+                <p class="sizes-label">EU Size</p>
+                <div class="sizes-wrap">
+                  <button class="size-btn" onclick="selectSize(this)">38</button>
+                  <button class="size-btn" onclick="selectSize(this)">39</button>
+                  <button class="size-btn selected" onclick="selectSize(this)">40</button>
+                  <button class="size-btn" onclick="selectSize(this)">41</button>
+                  <button class="size-btn" onclick="selectSize(this)">42</button>
+                  <button class="size-btn" onclick="selectSize(this)">43</button>
+                </div>
+
+                <p class="card-desc">
+                  Breathable mesh upper over a cushioned EVA midsole.
+                  Lightweight and responsive, designed for all-day comfort from
+                  the gym to the street.
+                </p>
+
+                <div class="card-footer">
+                  <div class="price-block">
+                    <span class="price-label">Price</span>
+                    <span class="price-value">€129.99</span>
+                  </div>
+                  <button class="add-btn" aria-label="Add Air Runner Pro to cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" aria-label="Slim Straight Denim jeans">
+              <div class="card-img-wrap">
+                <img src="assets/images/jeans.png" alt="Brown oversized leather jacket" loading="eager" />
+                <button class="fav-btn" aria-label="Add to favorites" onclick="toggleFav(this)">
+                  <i class="ri-heart-line"></i>
+                </button>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Slim Straight Denim</h2>
+
+                <p class="sizes-label">Waist / Length</p>
+                <div class="sizes-wrap">
+                  <button class="size-btn" onclick="selectSize(this)">W28/L30</button>
+                  <button class="size-btn selected" onclick="selectSize(this)">W30/L32</button>
+                  <button class="size-btn" onclick="selectSize(this)">W32/L32</button>
+                  <button class="size-btn" onclick="selectSize(this)">W34/L32</button>
+                  <button class="size-btn" onclick="selectSize(this)">W36/L34</button>
+                </div>
+
+                <p class="card-desc">
+                  100% organic cotton with a mid-rise slim straight cut.
+                  Five-pocket construction and subtle fade. Versatile enough for
+                  any occasion, all year round.
+                </p>
+
+                <div class="card-footer">
+                  <div class="price-block">
+                    <span class="price-label">Price</span>
+                    <span class="price-value">€89.99</span>
+                  </div>
+                  <button class="add-btn" aria-label="Add Slim Straight Denim to cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="dots" role="tablist" aria-label="Product navigation">
+          <span class="dot active" role="tab" aria-label="Card 1" tabindex="0" onclick="goTo(0)"></span>
+          <span class="dot" role="tab" aria-label="Card 2" tabindex="0" onclick="goTo(1)"></span>
+          <span class="dot" role="tab" aria-label="Card 3" tabindex="0" onclick="goTo(2)"></span>
+        </div>
+      </div>
+
+      <button class="nav-btn" id="nextBtn" aria-label="Next product">
+        <i class="ri-arrow-right-s-line"></i>
+      </button>
+    </div>
+
+    <script src="assets/js/script.js" defer></script>
+  </body>
+</html>

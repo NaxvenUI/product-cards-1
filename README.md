@@ -13,6 +13,7 @@ A responsive product card carousel built with vanilla HTML, CSS, and JavaScript.
 ## Table of Contents
 
 - [About](#about)
+- [Live Demo](#live-demo)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Screenshots](#screenshots)
@@ -21,6 +22,12 @@ A responsive product card carousel built with vanilla HTML, CSS, and JavaScript.
 - [Accessibility](#accessibility)
 - [License](#license)
 - [Contact](#contact)
+
+---
+
+## Live Demo
+
+Live Demo available at: https://naxvenui-product-cards-1.netlify.app/
 
 ---
 

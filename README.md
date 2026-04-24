@@ -117,9 +117,9 @@ product-cards-1/
 │       └── script.js
 ├── docs/
 │   └── screenshots/
-│       ├── product_card_jacket.webp
-│       ├── product_card_sneakers.webp
-│       └── product_card_denim.webp
+│       ├── mockup_1.png
+│       ├── mockup_2.png
+│       └── mockup_3.png
 ├── index.html
 └── README.md
 ```

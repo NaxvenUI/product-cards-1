@@ -13,21 +13,15 @@ A responsive product card carousel built with vanilla HTML, CSS, and JavaScript.
 ## Table of Contents
 
 - [About](#about)
-- [Live Demo](#live-demo)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
+- [Live Demo](#live-demo)
 - [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Accessibility](#accessibility)
 - [License](#license)
 - [Contact](#contact)
-
----
-
-## Live Demo
-
-Live Demo available at: https://naxvenui-product-cards-1.netlify.app/
 
 ---
 
@@ -57,6 +51,12 @@ Product Cards is a frontend UI component built as part of a frontend development
 - Vanilla JavaScript (ES6+)
 - Satoshi font via Fontshare CDN
 - Remix Icons via jsDelivr CDN
+
+---
+
+## Live Demo
+
+Live Demo available at: https://naxvenui-product-cards-1.netlify.app/
 
 ---
 

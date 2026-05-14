@@ -85,7 +85,7 @@ No build step required. Clone or download the project and open `index.html` dire
 
 ```bash
 git clone https://github.com/NaxvenUI/product-cards-1.git
-cd product-cards-1
+cd product_cards_1
 ```
 
 2. Open the file in your browser:
